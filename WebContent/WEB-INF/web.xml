@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>HospitalManagementSystem</display-name>
+	<welcome-file-list>
+		<welcome-file>home.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>alogin</servlet-name>
+		<servlet-class>action.alogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>alogin</servlet-name>
+		<url-pattern>/alogin</url-pattern>
+	</servlet-mapping>
+
+	<!-- admin -->
+	<servlet>
+		<servlet-name>patientManage</servlet-name>
+		<servlet-class>action.patientManage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>patientManage</servlet-name>
+		<url-pattern>/patientManage</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>patientDetails</servlet-name>
+		<servlet-class>action.patientDetails</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>patientDetails</servlet-name>
+		<url-pattern>/patientDetails</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>patientEdit</servlet-name>
+		<servlet-class>action.patientEdit</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>patientEdit</servlet-name>
+		<url-pattern>/patientEdit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>patientUpdate</servlet-name>
+		<servlet-class>action.patientUpdate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>patientUpdate</servlet-name>
+		<url-pattern>/patientUpdate</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>patientAdd</servlet-name>
+		<servlet-class>action.patientAdd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>patientAdd</servlet-name>
+		<url-pattern>/patientAdd</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>patientDelete</servlet-name>
+		<servlet-class>action.patientDelete</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>patientDelete</servlet-name>
+		<url-pattern>/patientDelete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>patientSelect</servlet-name>
+		<servlet-class>action.patientSelect</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>patientSelect</servlet-name>
+		<url-pattern>/patientSelect</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>patientSelect2</servlet-name>
+		<servlet-class>action.patientSelect2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>patientSelect2</servlet-name>
+		<url-pattern>/patientSelect2</url-pattern>
+	</servlet-mapping>
+
+	<!-- doctors -->
+
+	<servlet>
+		<servlet-name>doctorManage</servlet-name>
+		<servlet-class>action.doctorManage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>doctorManage</servlet-name>
+		<url-pattern>/doctorManage</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>doctorDetails</servlet-name>
+		<servlet-class>action.doctorDetails</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>doctorDetails</servlet-name>
+		<url-pattern>/doctorDetails</url-pattern>
+	</servlet-mapping>
+	
+	<!-- patients -->
+	
+	<servlet>
+		<servlet-name>patientRegist</servlet-name>
+		<servlet-class>action.patientRegist</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>patientRegist</servlet-name>
+		<url-pattern>/patientRegist</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>patientLogin</servlet-name>
+		<servlet-class>action.patientLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>patientLogin</servlet-name>
+		<url-pattern>/patientLogin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>patientAppointmentManage</servlet-name>
+		<servlet-class>action.patientAppointmentManage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>patientAppointmentManage</servlet-name>
+		<url-pattern>/patientAppointmentManage</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>appointmentAdd</servlet-name>
+		<servlet-class>action.appointmentAdd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>appointmentAdd</servlet-name>
+		<url-pattern>/appointmentAdd</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>appointmentSave</servlet-name>
+		<servlet-class>action.appointmentSave</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>appointmentSave</servlet-name>
+		<url-pattern>/appointmentSave</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>aAppointments</servlet-name>
+		<servlet-class>action.aAppointments</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>aAppointments</servlet-name>
+		<url-pattern>/aAppointments</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</web-app>

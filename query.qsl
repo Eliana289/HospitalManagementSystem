@@ -1,0 +1,97 @@
+//patients
+CREATE TABLE `patients` (
+  `pid` int(10) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `address` varchar(150) NOT NULL,
+  `gender` char(7) NOT NULL,
+  `dob` varchar(50) NOT NULL,
+  `age` int(10) NOT NULL,
+  `disease` varchar(50) NOT NULL,
+  `registDate` varchar(50) NOT NULL,
+  `status` varchar(10) NOT NULL,
+  `phoneNo` varchar(20) NOT NULL,
+  `emailNo` varchar(50) NOT NULL,
+  `notes` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `patients`
+--
+
+INSERT INTO  `patients` (`pid`, `name`, `address`, `gender`, `dob`, `age`, `disease`, `registDate`, `status`, `phoneNo`, `emailNo`, `notes`) VALUES
+(314, 'Coaja', 'NJ', 'Female', '06/28/2000', 20, 'Fever', '07/30/2020', 'Admitted', '07923051581', 't.r.royel@gmail.com', 'none');
+
+INSERT INTO `patients` (`pid`, `name`, `address`, `gender`, `dob`, `age`, `disease`, `registDate`, `status`, `phoneNo`, `emailNo`, `notes`) VALUES
+(315, 'Hana', 'CA', 'Female', '05/12/1998', 22, 'Cough', '07/28/2020', 'Unadmitted', '13876474632', 'hannana@gmail.com', 'Not serious');
+
+
+INSERT INTO `patients` (`pid`, `name`, `address`, `gender`, `dob`, `age`, `disease`, `registDate`, `status`, `phoneNo`, `emailNo`, `notes`) VALUES(316, 'jiuhghk','Canada','Male','09/06/1997',23,'Sore back','07/05/2020','Admitted','8736273847','jiuhghk@gmail.com','Completed');
+
+CREATE TABLE `patientsaccounts` (
+`pid` int(10) NOT NULL,
+`password` varchar(20) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+
+INSERT INTO `patientsaccounts` (`pid`, `password`) VALUES (316,'31612345');
+INSERT INTO `patientsaccounts` (`pid`, `password`) VALUES (315,'31512345');
+INSERT INTO `patientsaccounts` (`pid`, `password`) VALUES (314,'31412345');
+
+//patients appointments
+
+CREATE TABLE `appointments` (
+`aid` int(10) NOT NULL,
+`pid` int(10) NOT NULL,
+`did` int(10) NOT NULL,
+`date` varchar(30) NOT NULL,
+`room` varchar(20) NOT NULL,
+`doctor` varchar(20) NOT NULL,
+`status` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+INSERT INTO `appointments` (`aid`, `pid`, `did`, `date`, `room`, `doctor`, `status`) VALUES
+(458, 314, 216, '07/05/2020', '3017', 'Dora J', 'completed');
+INSERT INTO `appointments` (`aid`, `pid`, `did`, `date`, `room`, `doctor`, `status`) VALUES
+(459, 314, 216, '08/12/2020', '3013', 'Dora J', 'ongoing');
+INSERT INTO `appointments` (`aid`, `pid`, `did`, `date`, `room`, `doctor`, `status`) VALUES
+(460, 314, 216, '09/18/2020', 'none', 'Dora J', 'submitted');
+
+//doctors
+CREATE TABLE `doctors` (
+  `name` varchar(50) NOT NULL,
+  `workid` int(10) NOT NULL,
+  `title` varchar(10) NOT NULL,
+  `certificate` varchar(10) NOT NULL,
+  `officeTime` varchar(50) NOT NULL,
+  `room` varchar(20) NOT NULL,
+  `department` varchar(20) NOT NULL,
+  `speciality` varchar(10) NOT NULL,
+  `checkupFee` int(10) NOT NULL,
+  `phoneNo` varchar(20) NOT NULL,
+  `emailNo` varchar(50) NOT NULL
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+INSERT INTO `doctors` (`name`,`workid`,`title`, `certificate`,`officeTime`,`room`,`department`,`speciality`, `checkupFee`, `phoneNo`,`emailNo`) VALUES 
+('Dora J',216, 'Doc', 'Valid','work days from 9am to 4pm','3017','Oral', 'Teeth care', 80,'9847264728','dora@gmail.com');
+
+INSERT INTO `doctors` (`name`,`workid`,`title`, `certificate`,`officeTime`,`room`,`department`,`speciality`, `checkupFee`, `phoneNo`,`emailNo`) VALUES 
+('Vince K',217, 'Doc', 'Valid','work days from 9am to 4pm','3019','Surgery', 'Teeth', 80,'8472647287','VinceK@gmail.com');
+
+CREATE TABLE `doctorsbio` (
+  `name` varchar(50) NOT NULL,
+  `gender` char(7) NOT NULL,
+  `dob` varchar(50) NOT NULL,
+  `age` int(10) NOT NULL,
+  `address` varchar(150) NOT NULL,
+  `startDate` varchar(10) NOT NULL,
+  `workid` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+INSERT INTO `doctorsbio` (`name`,`gender`, `dob`,`age`,`address`,`startDate`, `workid`) VALUES 
+('Dora J','Famale','06/07/1975',45,'CA,US','08/07/2016',216);
+INSERT INTO `doctorsbio` (`name`,`gender`, `dob`,`age`,`address`,`startDate`, `workid`) VALUES 
+('Vince K','Male','08/20/1979',41,'CA,US','08/07/2016',217);
+
+//staff
+
+
